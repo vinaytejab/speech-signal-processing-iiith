@@ -1,44 +1,22 @@
 <html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-<script type=text/javascript>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-function jsreset(){
-	document.myform.uttflag.value=0;
-	document.myform.sylflag.value=0;
-	document.myform.uttind.value='';
-	document.myform.utteng.value='';
-	document.myform.phnseq.value='';
-	document.myform.rsylseq.value='';
-	document.myform.usylseq.value='';
-}
+<title>PART-3</title>
+</head>
+<body bgcolor="yellow">
 
-function jsverifysyl(){
-	if(document.myform.usyl.value == ''){
-		alert('Syllabify the utterance first...');
-	}
-	else{
-		document.myform.sylflag.value=1;
-		document.myform.submit();
-	}
-	
-}
+<h2>Part-3: Segmentation without feedback </h2></td>
 
-function loadwavfile(filename){
-	var speechtooljs=document.getElementsByName('speechtool')[0];
-	
-	var filename = 'ex' +  + '.wav';
-	//alert(filename);
-	speechtooljs.setAudioFile(filename);
-	speechtooljs.loadAudio();
 
-}
-
-</script>
-
-<table width=900><tr>
-<td><h2>Part-3: Segmentation without feedback </h2></td>
-
-</tr></table>
 
 <input type=hidden name=sylflag value=0 />
 
@@ -90,15 +68,15 @@ function loadwavfile(filename){
     <td>
     <textarea rows=15 cols=46 name="refip" id='refipid' readonly=true onkeyup = "updatepos(this,document.box.refop)" onmouseup="updatePosition(this,document.box.refop)" class = "form" style="background-color:#dddddd; border:1px solid #888888;font-size:11pt;" wrap=on>a aa i ii u uu rx rx~ e ei ai o oo au an: ah:
 
-ka kha ga gha ng~a
-cha chha ja jha nj~a
-t:a t:ha d:a d:ha nd~a
-ta tha da dha na
-pa pha ba bha ma
-ya ra la va
-sa sha shha ha l:a
+        ka kha ga gha ng~a
+        cha chha ja jha nj~a
+        t:a t:ha d:a d:ha nd~a
+        ta tha da dha na
+        pa pha ba bha ma
+        ya ra la va
+        sa sha shha ha l:a
 
-ka kaa ki kii ku kuu krx krx~ ke kei kai ko koo kau kan: kah:</textarea>
+        ka kaa ki kii ku kuu krx krx~ ke kei kai ko koo kau kan: kah:</textarea>
     </td>
     <td>
     <textarea rows=14 cols=40 name="refop" id='refopid' readonly = "true" class = "form" style="background-color:#dddddd; border:1px solid #00006C; font-family:RaghuOriya" > </textarea>
@@ -106,6 +84,7 @@ ka kaa ki kii ku kuu krx krx~ ke kei kai ko koo kau kan: kah:</textarea>
   </tr>
 </table>
 </form>
-<script type="text/javascript"> updatePosition(this) </script>
-<script type="text/javascript"> updatepos(document.box.refip,document.box.refop) </script>
+<!--script type="text/javascript"> updatePosition(this) </script>
+<script type="text/javascript"> updatepos(document.box.refip,document.box.refop) </script-->
+</body>
 </html>
