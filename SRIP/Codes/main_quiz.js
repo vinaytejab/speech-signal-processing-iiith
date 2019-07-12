@@ -7,7 +7,7 @@ $('#b1').on('click', function () {
 
 
 
-var mins =10.5; 
+var mins=10;
   var check= 0;
         //calculate the seconds 
         var secs = mins*60; 
@@ -83,7 +83,146 @@ var mins =10.5;
             return secs - Math.round(mins * 60); 
         } 
 
+//array containing questions and answers.
 
+  var questions = [{
+    question: "Heart of Data Encryption Standard (DES), is the ?",
+    choices: ["DES function","Rounds","Cipher"],
+    correctAnswer: 0
+  }, {
+    question: "Data Encryption Standard (DES), was designed by ?",
+    choices: ["IBM","Intel","none"],
+    correctAnswer: 0
+  }, {
+    question: "In symmetric key cryptography, key used by sender and receiver is ?",
+    choices: ["shared","different","None"],
+    correctAnswer: 0
+  }, {
+    question: "Symmetric-key cryptography started thousands of years ago when people needed to exchange ?",
+    choices: ['Files','Secrets', 'Packets'],
+    correctAnswer: 1
+  }, {
+    question: "Relationship between a character in plaintext to a character is ?",
+    choices: ['many-to-one relationship',"one-to-many relationship", 'many-to-many relationship'],
+    correctAnswer: 1
+  },
+  {
+    question: " A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['block of packets','block of symbols','block of signals'],
+    correctAnswer: 1
+  },
+  {
+    question: "A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['Caesar cipher', 'XOR cipher','ciphe'],
+    correctAnswer: 1
+  },
+  {
+    question: "Cryptography can provide ?",
+    choices: ['entity authentication','nonrepudiation of messages', 'All of them'],
+    correctAnswer: 2
+  },
+  {
+    question: "Ciphers of today are called ?",
+    choices: ['Substitution Cipher','Round ciphers', 'Transposition Cipher'],
+    correctAnswer: 1
+  },
+  {
+    question: "Shift cipheris sometimes referred to as the ?",
+    choices: ['Caesar cipher','Julia cipher', 'plain cipher'],
+    correctAnswer: 0
+  },
+  {
+    question: "Heart of Data Encryption Standard (DES), is the ?",
+    choices: ["DES function","Rounds","Cipher"],
+    correctAnswer: 0
+  }, {
+    question: "Data Encryption Standard (DES), was designed by ?",
+    choices: ["IBM","Intel","none"],
+    correctAnswer: 0
+  }, {
+    question: "In symmetric key cryptography, key used by sender and receiver is ?",
+    choices: ["shared","different","None"],
+    correctAnswer: 0
+  }, {
+    question: "Symmetric-key cryptography started thousands of years ago when people needed to exchange ?",
+    choices: ['Files','Secrets', 'Packets'],
+    correctAnswer: 1
+  }, {
+    question: "Relationship between a character in plaintext to a character is ?",
+    choices: ['many-to-one relationship',"one-to-many relationship", 'many-to-many relationship'],
+    correctAnswer: 1
+  },
+  {
+    question: " A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['block of packets','block of symbols','block of signals'],
+    correctAnswer: 1
+  },
+  {
+    question: "A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['Caesar cipher', 'XOR cipher','ciphe'],
+    correctAnswer: 1
+  },
+  {
+    question: "Cryptography can provide ?",
+    choices: ['entity authentication','nonrepudiation of messages', 'All of them'],
+    correctAnswer: 2
+  },
+  {
+    question: "Ciphers of today are called ?",
+    choices: ['Substitution Cipher','Round ciphers', 'Transposition Cipher'],
+    correctAnswer: 1
+  },
+  {
+    question: "Shift cipheris sometimes referred to as the ?",
+    choices: ['Caesar cipher','Julia cipher', 'plain cipher'],
+    correctAnswer: 0
+  },
+  {
+    question: "Heart of Data Encryption Standard (DES), is the ?",
+    choices: ["DES function","Rounds","Cipher"],
+    correctAnswer: 0
+  }, {
+    question: "Data Encryption Standard (DES), was designed by ?",
+    choices: ["IBM","Intel","none"],
+    correctAnswer: 0
+  }, {
+    question: "In symmetric key cryptography, key used by sender and receiver is ?",
+    choices: ["shared","different","None"],
+    correctAnswer: 0
+  }, {
+    question: "Symmetric-key cryptography started thousands of years ago when people needed to exchange ?",
+    choices: ['Files','Secrets', 'Packets'],
+    correctAnswer: 1
+  }, {
+    question: "Relationship between a character in plaintext to a character is ?",
+    choices: ['many-to-one relationship',"one-to-many relationship", 'many-to-many relationship'],
+    correctAnswer: 1
+  },
+  {
+    question: " A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['block of packets','block of symbols','block of signals'],
+    correctAnswer: 1
+  },
+  {
+    question: "A transposition cipher reorders (permutes) symbols in a ?",
+    choices: ['Caesar cipher', 'XOR cipher','ciphe'],
+    correctAnswer: 1
+  },
+  {
+    question: "Cryptography can provide ?",
+    choices: ['entity authentication','nonrepudiation of messages', 'All of them'],
+    correctAnswer: 2
+  },
+  {
+    question: "Ciphers of today are called ?",
+    choices: ['Substitution Cipher','Round ciphers', 'Transposition Cipher'],
+    correctAnswer: 1
+  },
+  {
+    question: "Shift cipheris sometimes referred to as the ?",
+    choices: ['Caesar cipher','Julia cipher', 'plain cipher'],
+    correctAnswer: 0
+  }];
   
   var questionCounter = 0; //Tracks question number
   var selections = []; //Array containing user choices

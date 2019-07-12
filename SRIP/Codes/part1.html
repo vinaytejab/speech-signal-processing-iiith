@@ -1,0 +1,226 @@
+<html>
+<head>
+<style type="text/css">
+  
+  .buttonclass {
+      background-color: lightgray;
+      color: black;
+      text-align: center;
+      border: 2px solid #696969;
+      padding: 5px;
+      
+  }
+  .buttonclass:hover {background-color:#6FEC26 ; text-align: center;}
+</style>
+<script>
+function myFunction() {
+  alert("Link page to be added");
+}
+</script>
+<style>
+    #table1 {
+      font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+        border:1px solid rgb(180, 180, 180);
+
+        
+      }
+
+      #final1 {
+      font-family: arial, sans-serif;
+        
+        width: 50%;
+        border:1px solid rgb(180, 180, 180);
+        text-align: center;
+
+        
+      }
+      td, th {
+        
+        
+        
+        padding: 3px;
+    }
+
+    #tr1:nth-child(even) {
+        background-color:rgba(120, 120, 120,0.2);
+    }
+
+    #head1{
+        background-color:rgba(210, 196, 255,0.6);
+        padding: 30px;
+        text-align: center;
+        
+        color: black;
+        font-weight: bold;
+    }
+    .group1{
+      text-align:center;
+
+    }
+    .speechwave{
+
+    }
+    option{
+      background-color: white;
+      color:black;
+    }
+
+    option:hover{
+        background-color:rgba(82, 227, 233,0.2);
+    }
+
+    #waveform{
+      text-align: center;
+      border: 1px solid black;
+      background-color: white;
+    }
+
+    #play{
+      text-align: center;
+    }
+
+    .first{
+      background-color: rgb(60, 60, 60);
+      color:white;
+    }
+
+  </style>
+<link rel="stylesheet" type="text/css" href="../libraries/bootstrap/css/bootstrap.css">
+<title>PART-1</title>
+</head>
+<body>
+<div id="content" class="container " align="center">
+    <h2>MANUAL SPEECH SIGNAL TO SYMBOL TRANSFORMATION</h2><br>
+    <h2>PART-1: PRE-SEGEMENTED EXAMPLES</h2>
+    <hr></div>
+    <div align="left">
+     <a href="part3.html" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">GO TO PART-3</a>
+   </div>
+     <div align="right">
+     <a href="#" style="font-size: 15px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">GO TO PART-2</a>
+   </div>
+
+
+  <div class='container group1 '>
+    <div class="btn-group">SELECT LANGUAGE: &nbsp&nbsp&nbsp
+      <select id="mySelect" class="btn btn-outline-info" style="border-radius: 5px">
+        <option value="" selected disabled hidden>Choose Language</option>
+        <option value="none">None</option>
+        <option value="Hindi" >Hindi</option>
+        <option value="Telugu">Telugu</option>
+          <option value="Tamil">Tamil</option>
+          <!--<option value="Lang 4">Lang 4</option>-->
+      </select>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px">Reset</button>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+
+      <!-- Large modal -->
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="border-radius: 5px">Help</button>
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+
+                              1.Select the Langauge from Language dropdown.<button type="button" class="btn btn-outline-info m-2">Choose Langauge</button><br><br>
+
+                              2.Click on the <button type="button" class="btn btn-outline-success m-2">Play</button> to play the complete audio .<br><br>
+
+                              3. Drag sections in waveform box to create "Regions".<br>
+                              <img src="two.png"><br>
+                              &nbsp;&nbsp;&nbsp;a. Click in the created region to play that particular part.<br>
+                              &nbsp;&nbsp;&nbsp;b. shift + click in case (a) does not work.<br><br>
+
+                              4.Click on each phoneme in <strong>Sym</strong> coloumn of the  table and observe its respective region in the waveform box.<br><br>
+
+                              5. Drag the slider to the right to <strong>ZOOM IN</strong>  and observe the region properly.<br><br>
+
+                              <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary"  data-dismiss="modal">Close</button>
+                              </div>
+
+                          </div>
+
+      
+            </div>
+          </div>
+      </div>
+
+      
+
+    </div><br><br>
+    
+
+  </div>
+  
+
+  <table  align="center" id="table1" class="p-3">
+    <tr id="tr1" class="p-3">
+      <td>Utterance</td>
+      <td id='utterance'>Choose Language.</td>
+    </tr>
+    <tr id="tr1" class="p-3">
+      <td>Transliteration</td>
+      <td id='translit'>Choose Language.</td>
+    </tr>
+    <tr id="tr1" class="p-3">
+      <td>Syllables</td>
+      <td id='syll'>Choose Language.</td>
+    </tr>
+    <tr id="tr1" class="p-3">
+      <td>Phonemes</td>
+      <td id='ph'>Choose Language.</td>
+    </tr>
+    
+  </table>
+
+  <button type="button" class="btn btn-outline-success m-3  " id="play" style="border-radius: 5px; text-align: center;">play</button>
+
+  <div id="waveform" class="m-2 sticky-top" ></div>
+  <div id="wave-timeline" class="m-2"></div>
+  
+    <div class="col-xs-3" style="text-align: center;">
+      <input id="slider" type="range" min="500" max="2000" value="0" style="width: 75%" />
+    </div>
+    <br><br>
+    <table align="center" id="final1"  class="table  table-bordered"></table>
+  <table id="final2"></table>
+  
+
+
+
+
+  <br><br>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../libraries/bootstrap/js/popper.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.cursor.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.js"></script>
+    
+    
+    <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="part1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script> 
+</body>
+</html>
