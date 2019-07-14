@@ -524,9 +524,250 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById("syll").innerHTML = " ii roo ju vaar tal loo ni mukh yaam shaa lu" ;
 			document.getElementById("ph").innerHTML = " ii r oo j u v aa r t a l l oo n i m u kh y aa m sh aa l u"  ;
 			wavesurfer.load('telugu.mp3');
-			$("#final1").empty();
+			$("#final2").empty();
 			$("#final3").empty();
+      //clears wave region
+      //wavesurfer.clearRegions();
+      
+      var table = document.getElementById("final2");
 
+      var r0 = table.insertRow(0);
+        var r0c1 = r0.insertCell(0);
+        var r0c2 = r0.insertCell(1);
+        var r0c3 = r0.insertCell(2);
+        r0.className="first";
+
+        r0c1.innerHTML = '<strong>Sym</strong>';
+        r0c2.innerHTML = '<strong>STARTS</strong>';
+        r0c3.innerHTML = '<strong>STOPS</strong>';
+
+
+
+        var r1 = table.insertRow(1);
+        var r1c1 = r1.insertCell(0);
+        var r1c2 = r1.insertCell(1);
+        var r1c3 = r1.insertCell(2);
+        r1c1.innerHTML = '<button type="button" class="btn btn-outline-dark btn-sm m-1" id="ii" ">ii</button>';
+        r1c2.innerHTML = ''
+        r1c3.innerHTML=''
+//row 1t
+
+        var r2 = table.insertRow(2);
+        var r2c1 = r2.insertCell(0);
+        var r2c2 = r2.insertCell(1);
+        var r2c3 = r2.insertCell(2);
+        
+        r2c1.innerHTML = '<button type="button" class="btn btn-outline-dark btn-sm m-1" id="r1" ">r</button>';
+        r2c2.innerHTML = ''
+        r2c3.innerHTML=''
+//row 2t        
+        var r3 = table.insertRow(3);
+        var r3c1 = r3.insertCell(0);
+        var r3c2 = r3.insertCell(1);
+        var r3c3 = r3.insertCell(2);
+        
+        r3c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="oo1 ">oo</button>'
+        r3c2.innerHTML = ''
+        r3c3.innerHTML=''
+//row 3t
+        var r4 = table.insertRow(4);
+        var r4c1 = r4.insertCell(0);
+        var r4c2 = r4.insertCell(1);
+        var r4c3 = r4.insertCell(2);
+        
+        r4c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="j" ">j</button>'
+        r4c2.innerHTML = ''
+        r4c3.innerHTML=''
+//row 4t        
+        var r5 = table.insertRow(5);
+        var r5c1 = r5.insertCell(0);
+        var r5c2 = r5.insertCell(1);
+        var r5c3 = r5.insertCell(2);
+        
+        r5c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="u1" ">u</button>'
+        r5c2.innerHTML = ''
+        r5c3.innerHTML=''
+//row6t
+        var r6 = table.insertRow(6 );
+        var r6c1 = r6.insertCell(0);
+        var r6c2 = r6.insertCell(1);
+        var r6c3 = r6.insertCell(2);
+        
+        r6c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="v" ">v</button>'
+        r6c2.innerHTML = ''
+        r6c3.innerHTML=''
+//row 7t        
+        var r7 = table.insertRow(7);
+        var r7c1 = r7.insertCell(0);
+        var r7c2 = r7.insertCell(1);
+        var r7c3 = r7.insertCell(2);
+        
+        r7c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="aa1" ">aa</button>'
+        r7c2.innerHTML = ''
+        r7c3.innerHTML=''
+//row 8t        
+        var r8 = table.insertRow(8 );
+        var r8c1 = r8.insertCell(0);
+        var r8c2 = r8.insertCell(1);
+        var r8c3 = r8.insertCell(2);
+       
+        r8c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="r2" ">r</button>'
+        r8c2.innerHTML = ''
+        r8c3.innerHTML=''
+//row 9t        
+        var r9 = table.insertRow(9 );
+        var r9c1 = r9.insertCell(0);
+        var r9c2 = r9.insertCell(1);
+        var r9c3 = r9.insertCell(2);
+        
+        r9c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="t" ">t</button>'
+        r9c2.innerHTML = ''
+        r9c3.innerHTML=''
+//row  10t        
+        var r10 = table.insertRow(10);
+        var r10c1 = r10.insertCell(0);
+        var r10c2 = r10.insertCell(1);
+        var r10c3 = r10.insertCell(2);
+        
+        r10c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="a" ">a</button>'
+        r10c2.innerHTML = ''
+        r10c3.innerHTML=''
+//row 11t
+        var r11 = table.insertRow(11 );
+        var r11c1 = r11.insertCell(0);
+        var r11c2 = r11.insertCell(1);
+        var r11c3 = r11.insertCell(2);
+        
+        r11c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="l1" ">l</button>'
+        r11c2.innerHTML = ''
+        r11c3.innerHTML=''
+//row 12t        
+        var r12 = table.insertRow(12);
+        var r12c1 = r12.insertCell(0);
+        var r12c2 = r12.insertCell(1);
+        var r12c3 = r12.insertCell(2);
+        
+        r12c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="l2" ">l</button>'
+        r12c2.innerHTML = ''
+        r12c3.innerHTML=''
+//row 13t
+        var r13 = table.insertRow(13 );
+        var r13c1 = r13.insertCell(0);
+        var r13c2 = r13.insertCell(1);
+        var r13c3 = r13.insertCell(2);
+
+        r13c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="oo2" ">oo</button>'
+        r13c2.innerHTML = ''
+        r13c3.innerHTML=''
+//row  14t        
+        var r14 = table.insertRow(14 );
+        var r14c1 = r14.insertCell(0);
+        var r14c2 = r14.insertCell(1);
+        var r14c3 = r14.insertCell(2);
+        
+        r14c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="n" ">n</button>'
+        r14c2.innerHTML = ''
+        r14c3.innerHTML=''
+//row  15t        
+        var r15 = table.insertRow(15 );
+        var r15c1 = r15.insertCell(0);
+        var r15c2 = r15.insertCell(1);
+        var r15c3 = r15.insertCell(2);
+        
+        r15c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="i" ">i</button>'
+        r15c2.innerHTML = ''
+        r15c3.innerHTML=''
+//row 16t        
+        var r16 = table.insertRow(16 );
+        var r16c1 = r16.insertCell(0);
+        var r16c2 = r16.insertCell(1);
+        var r16c3 = r16.insertCell(2);
+        
+        r16c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="m1" ">m</button>'
+        r16c2.innerHTML = ''
+        r16c3.innerHTML=''
+//row 17t        
+        var r17 = table.insertRow(17 );
+        var r17c1 = r17.insertCell(0);
+        var r17c2 = r17.insertCell(1);
+        var r17c3 = r17.insertCell(2);
+        
+        r17c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="u2" ">u</button>'
+        r17c2.innerHTML = ''
+        r17c3.innerHTML = ''
+//row 18t
+        var r18 = table.insertRow(18 );
+        var r18c1 = r18.insertCell(0);
+        var r18c2 = r18.insertCell(1);
+        var r18c3 = r18.insertCell(2);
+        var r18c4 = r18.insertCell(3);
+        r18c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="kh" ">kh</button>'
+        r18c2.innerHTML = ''
+        r18c3.innerHTML=''
+//row 19t
+        var r19 = table.insertRow(19 );
+        var r19c1 = r19.insertCell(0);
+        var r19c2 = r19.insertCell(1);
+        var r19c3 = r19.insertCell(2);
+       
+        r19c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="y" ">y</button>'
+        r19c2.innerHTML = ''
+        r19c3.innerHTML=''
+//row 20t
+        var r20 = table.insertRow(20 );
+        var r20c1 = r20.insertCell(0);
+        var r20c2 = r20.insertCell(1);
+        var r20c3 = r20.insertCell(2);
+        
+        r20c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="aa2" ">aa</button>'
+        r20c2.innerHTML = ''
+        r20c3.innerHTML=''
+//row 21t
+        var r21 = table.insertRow(21 );
+        var r21c1 = r21.insertCell(0);
+        var r21c2 = r21.insertCell(1);
+        var r21c3 = r21.insertCell(2);
+
+        r21c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="m2" ">m</button>'
+        r21c2.innerHTML = ''
+        r21c3.innerHTML =''
+//row 22t
+        var r22 = table.insertRow(22 );
+        var r22c1 = r22.insertCell(0);
+        var r22c2 = r22.insertCell(1);
+        var r22c3 = r22.insertCell(2);
+        
+        r22c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="sh" ">sh</button>'
+        r22c2.innerHTML = ''
+        r22c3.innerHTML =''
+//row 23t
+        var r23 = table.insertRow(23 );
+        var r23c1 = r23.insertCell(0);
+        var r23c2 = r23.insertCell(1);
+        var r23c3 = r23.insertCell(2);
+        
+        r23c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="aa3" ">aa</button>'
+        r23c2.innerHTML = ''
+        r23c3.innerHTML = ''
+//row 24t        
+        var r24 = table.insertRow(24 );
+        var r24c1 = r24.insertCell(0);
+        var r24c2 = r24.insertCell(1);
+        var r24c3 = r24.insertCell(2);
+
+        r24c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="l3" ">l</button>'
+        r24c2.innerHTML = ''
+        r24c3.innerHTML = ''
+
+//row 25t
+        var r25 = table.insertRow(25 );
+        var r25c1 = r25.insertCell(0);
+        var r25c2 = r25.insertCell(1);
+        var r25c3 = r25.insertCell(2);
+
+        r25c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="u3" ">u</button>'
+        r25c2.innerHTML = ''
+        r25c3.innerHTML = ''
 		}
 
 		if(sel==="Tamil"){
