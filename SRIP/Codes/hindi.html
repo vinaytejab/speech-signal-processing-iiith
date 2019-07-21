@@ -10,10 +10,28 @@
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
     <script src="build/Tone.js"></script>
     <script src="js/tonejs-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../libraries/bootstrap/css/bootstrap.css">
     <style type="text/css">
-        tone-play-toggle {
+         tone-play-toggle {
             margin-bottom: 10px;
         }
+         #table1 {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            border:5px solid rgb(180, 180, 180);
+        }
+
+        #final1,#final2 {
+        font-family: arial, sans-serif;
+        ]width: 50%;
+        border:1px solid rgb(180, 180, 180);
+        text-align: center;
+        }
+
+      td, th {
+        padding: 3px;
+      }
     </style>
     <script>
             // Store the 3 buttons in some object
@@ -90,15 +108,38 @@
 <body>
 
         <!--tone-loader></tone-loader-->
-
-        <h4>HINDI PART</h4>  
+        <br>
+        <h4 align="center">HINDI PART</h4> 
+        <div align="right">
+            <a href="index.html" style="font-size: 20px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">HOME/BACK</a>
+        </div> 
+        <h5 align="center">Please Set the Loop start and Loop End Slider for hearing the selected word with reference to the table given below</h5>
         <br><br>
             <tone-play-toggle></tone-play-toggle>
             <br><br>
             <tone-player></tone-player>
-       
+            <br>
+            <table  align="center" id="table1" class="p-3">
+                <tr id="tr1" class="p-3">
+                  <td>Utterance</td>
+                  <td>" विदेश् मंत्रालय् के प्रवक्ता ने फिर् कहा "</td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Transliteration</td>
+                  <td>" videsh man'traalay ke pravaktaa ne phir kahaa " </td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Syllables</td>
+                  <td>"vi desh man' traa lay ke pra vak taa ne phir ka haa"/td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Phonemes</td>
+                  <td>" v i d e sh m a n' t r aa l a y k e p r a v a k t aa n e ph i r k a h aa"</td>
+                </tr>
     
+        </table>
     
+
     <script type="text/javascript">
         //the player
         var player = new Tone.Player({

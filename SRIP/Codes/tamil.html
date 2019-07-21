@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-    <title>Tamil Sound</title>
+    <title>Telugu Sound</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" type="image/png" sizes="174x174" href="./favicon.png">
@@ -10,10 +10,28 @@
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
     <script src="build/Tone.js"></script>
     <script src="js/tonejs-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="../libraries/bootstrap/css/bootstrap.css">
     <style type="text/css">
-        tone-play-toggle {
+         tone-play-toggle {
             margin-bottom: 10px;
         }
+         #table1 {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            border:5px solid rgb(180, 180, 180);
+        }
+
+        #final1,#final2 {
+        font-family: arial, sans-serif;
+        ]width: 50%;
+        border:1px solid rgb(180, 180, 180);
+        text-align: center;
+        }
+
+      td, th {
+        padding: 3px;
+      }
     </style>
     <script>
             // Store the 3 buttons in some object
@@ -90,22 +108,45 @@
 <body>
 
         <!--tone-loader></tone-loader-->
-
-        <h4>TAMIL PART</h4>  
+        <br>
+        <h4 align="center">TELUGU PART</h4> 
+        <div align="right">
+            <a href="index.html" style="font-size: 20px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">HOME/BACK</a>
+        </div> 
+        <h5 align="center">Please Set the Loop start and Loop End Slider for hearing the selected word with reference to the table given below</h5>
         <br><br>
             <tone-play-toggle></tone-play-toggle>
             <br><br>
             <tone-player></tone-player>
-       
+            <br>
+            <table  align="center" id="table1" class="p-3">
+                <tr id="tr1" class="p-3">
+                  <td>Utterance</td>
+                  <td>" வணக்கம் இன்ரைய தலைப்பு செய்திகள்"</td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Transliteration</td>
+                  <td>"vand~akkam inraiya talaippu cheydikal:"</td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Syllables</td>
+                  <td>" va nd~a kkam in rai ya ta lai ppu chey di kal "</td>
+                </tr>
+                <tr id="tr1" class="p-3">
+                  <td>Phonemes</td>
+                  <td> "v a nd~ a kk a m i n r ai y a t a l ai pp u ch ey d i k a l "</td>
+                </tr>
     
+        </table>
     
+
     <script type="text/javascript">
         //the player
         var player = new Tone.Player({
-            "url" : "./audio/FWDL3.[mp3|ogg]",
+            "url" : "audio/FWDL3.[mp3|ogg]",
             "loop" : true,
             "loopStart" : 0,
-            "loopEnd" : 3,
+            "loopEnd" : 2.5,
         }).toMaster();
 
         //bind the interface

@@ -28,17 +28,14 @@ function myFunction() {
         border-collapse: collapse;
         width: 50%;
         border:1px solid rgb(180, 180, 180);
-
         
       }
-
       #final1,#final2 {
       font-family: arial, sans-serif;
         
         width: 50%;
         border:1px solid rgb(180, 180, 180);
         text-align: center;
-
         
       }
       td, th {
@@ -47,11 +44,9 @@ function myFunction() {
         
         padding: 3px;
     }
-
     #tr1:nth-child(even) {
         background-color:rgba(120, 120, 120,0.2);
     }
-
     #head1{
         background-color:rgba(210, 196, 255,0.6);
         padding: 30px;
@@ -62,35 +57,28 @@ function myFunction() {
     }
     .group1{
       text-align:center;
-
     }
     .speechwave{
-
     }
     option{
       background-color: white;
       color:black;
     }
-
     option:hover{
         background-color:rgba(82, 227, 233,0.2);
     }
-
     #waveform{
       text-align: center;
       border: 1px solid black;
       background-color: white;
     }
-
     #play{
       text-align: center;
     }
-
     .first{
       background-color: rgb(60, 60, 60);
       color:white;
     }
-
   </style>
 </head>
 <body>
@@ -107,27 +95,25 @@ function myFunction() {
 
 
   <div class='container group1 '>
-    <div class="btn-group">SELECT LANGUAGE: &nbsp&nbsp&nbsp
-      <select id="mySelect" class="btn btn-outline-info" style="border-radius: 5px">
-        <option value="" selected disabled hidden>Choose Language</option>
-        <option value="Hindi" >Hindi</option>
-        <option value="Telugu">Telugu</option>
-          <option value="Tamil">Tamil</option>
+    <div class="list">SELECT LANGUAGE FOR THE CORRESPONDING AUDIO SEGMENT :<br>
+      <br><a href="hindi.html" style="font-size: 25px;">Click Here For Hindi Audio</a><br><br>
+      <a href="telugu.html" style="font-size: 25px;">Click Here For Telugu Audio</a><br><br>
+      <a href="tamil.html" style="font-size: 25px;">Click Here For Tamil Audio</a> <br><br>
           <!--<option value="Lang 4">Lang 4</option>-->
       </select>
       &nbsp;
       &nbsp;
       &nbsp;
-      <button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px">Reset</button>
+      <!--button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px">Reset</button-->
       &nbsp;
       &nbsp;
       &nbsp;
 
       <!-- Large modal -->
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="border-radius: 5px">Help</button>
+      <!--button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="border-radius: 5px">Help</button-->
 
-      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
@@ -169,7 +155,7 @@ function myFunction() {
   </div>
   
 
-  <table  align="center" id="table1" class="p-3">
+  <!--table  align="center" id="table1" class="p-3">
     <tr id="tr1" class="p-3">
       <td>Utterance</td>
       <td id='utterance'>Choose Language.</td>
@@ -187,7 +173,8 @@ function myFunction() {
       <td id='ph'>Choose Language.</td>
     </tr>
     
-  </table>
+  </table-->
+  <h3 align="center">Sample Audio(Presegmented)</h3><br><br>
         <!-- Create a div where the audio waves will be shown --> 
         <div id="audio-spectrum"></div>
         <div id="wave-timeline" class="m-2"></div>
@@ -201,7 +188,7 @@ function myFunction() {
 <div id="waveform" class="m-2 sticky-top" ></div>
 <div id="timeline"></div>
 
-                <div class="controls">
+                <!--div class="controls">
                     <div class="row">
                         <div class="col-sm-7">
                             <button class="btn btn-primary" data-action="play">
@@ -225,15 +212,16 @@ function myFunction() {
                             <i class="glyphicon glyphicon-zoom-out"></i>
                         </div>
                     </div>
-                </div>
+                </div-->
   <div id="wave-timeline" class="m-2"></div>
   
     <div class="col-xs-3" style="text-align: center;">
       <input id="slider" type="range" min="500" max="2000" value="0" style="width: 75%" />
     </div>
     <br><br>
-    <table align="center" id="final1"  class="table  table-bordered"></table>
-    <table id="final2" align="center" class="table  table-bordered"></table>
+    <div align="center">
+    <h1> <a href="part3.html" style="font-size: 25px; padding-top: 10px;padding-right: 42px;padding-left: 40px;padding-bottom:10px;">GO TO PART-2</a></h1>
+   </div>
   
 
         <!-- Load the wavesurferscript , in this case from a CDN -->
@@ -245,44 +233,34 @@ function myFunction() {
                 pause: document.getElementById("btn-pause"),
                 stop: document.getElementById("btn-stop")
             };
-
             // Create an instance of wave surfer with its configuration
             var Spectrum = WaveSurfer.create({
                 container: '#audio-spectrum',
                 progressColor: "#03a9f4"
             });
-
             // Handle Play button
             buttons.play.addEventListener("click", function(){
                 Spectrum.play();
-
                 // Enable/Disable respectively buttons
                 buttons.stop.disabled = false;
                 buttons.pause.disabled = false;
                 buttons.play.disabled = true;
             }, false);
-
             // Handle Pause button
             buttons.pause.addEventListener("click", function(){
                 Spectrum.pause();
-
                 // Enable/Disable respectively buttons
                 buttons.pause.disabled = true;
                 buttons.play.disabled = false;
             }, false);
-
-
             // Handle Stop button
             buttons.stop.addEventListener("click", function(){
                 Spectrum.stop();
-
                 // Enable/Disable respectively buttons
                 buttons.pause.disabled = true;
                 buttons.play.disabled = false;
                 buttons.stop.disabled = true;
             }, false);
-
-
             // Add a listener to enable the play button once it's ready
             Spectrum.on('ready', function () {
                 buttons.play.disabled = false;
@@ -293,19 +271,16 @@ function myFunction() {
             window.addEventListener("resize", function(){
                 // Get the current progress according to the cursor position
                 var currentProgress = Spectrum.getCurrentTime() / Spectrum.getDuration();
-
                 // Reset graph
                 Spectrum.empty();
                 Spectrum.drawBuffer();
                 // Set original position
                 Spectrum.seekTo(currentProgress);
-
                 // Enable/Disable respectively buttons
                 buttons.pause.disabled = true;
                 buttons.play.disabled = false;
                 buttons.stop.disabled = false;
             }, false);
-
             // Load the audio file from your domain !
             Spectrum.load('ex1.wav');
         </script>
@@ -316,5 +291,4 @@ function myFunction() {
       });
     </script>
     </body>
-</html>                                                                                                                                                                                                                                                                                                        
-
+</html> 
